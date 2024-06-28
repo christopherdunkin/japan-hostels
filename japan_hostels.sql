@@ -14,7 +14,7 @@ SET rating_band = 'Very good'
 WHERE rating_band = 'Very Good';
 
 /*Currently, the distance_from_city_centre column is populated with strings of the 
-form distance followed by 'km from the city centre'. Here we trip 'km from the city centre' off the end of each such string:*/
+form distance followed by 'km from the city centre'. Here we strip 'km from the city centre' off the end of each such string:*/
 UPDATE hostels
 SET distance_from_city_centre = REPLACE(distance_from_city_centre, 'km from city centre', '');
 
